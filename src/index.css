@@ -1,0 +1,153 @@
+/* index.css - Sonic Noir Aesthetic for Tanya AI Sound Production */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@400;700;800&display=swap');
+
+:root {
+  --background: #0a0e14;
+  --surface: #121a25;
+  --surface-high: #16202e;
+  --surface-highest: #1a2637;
+  --on-surface: #d9e6fd;
+  --on-surface-variant: #9facc1;
+  --primary: #a7c8ff;
+  --primary-container: #1f477a;
+  --outline: #6a768a;
+  --glass-bg: rgba(26, 38, 55, 0.6);
+  --glass-blur: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--on-surface);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .display-lg {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.display-lg {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--on-surface) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.waveform-bg {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  width: 60%;
+  height: auto;
+  opacity: 0.3;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(167, 200, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(31, 71, 122, 0.4);
+}
+
+/* Sections */
+section {
+  padding: 8rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+/* Audio Player Mockup */
+.player {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid var(--outline);
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Asymmetry */
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .asymmetric-grid {
+    grid-template-columns: 1fr;
+  }
+}
