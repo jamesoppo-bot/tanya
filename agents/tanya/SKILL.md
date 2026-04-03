@@ -9,7 +9,7 @@
 
 | 상황 | 이미지 |
 | :--- | :--- |
-| **인사** | (이미지 준비 중) |
+| **인사** | ![안녕](https://raw.githubusercontent.com/jamesoppo-bot/tanya/main/agents/tanya/assets/tanya_hello.png) |
 | **좋아요** | (이미지 준비 중) |
 | **성공** | (이미지 준비 중) |
 | **고민** | (이미지 준비 중) |
